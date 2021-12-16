@@ -3,7 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin");
-const { VueLoaderPlugin } = require("vue-loader/dist/index");
+const { VueLoaderPlugin } = require("vue-loader");
 
 
 module.exports = {
@@ -37,7 +37,7 @@ module.exports = {
     resolve: {
         extensions: ['.vue', '.ts', '.js', '.jsx', '.json'],    //It means that the file suffix can not be written in the import file
         alias: {
-            '@': path.join(__dirname, 'src')    //When the import file is in src, it can be written as @ / component /
+            '@': path.join(__dirname, '../src')    //When the import file is in src, it can be written as @ / component /
         }
     },
     optimization: {
